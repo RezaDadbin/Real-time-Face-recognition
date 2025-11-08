@@ -1,6 +1,12 @@
-# 🧠 Face Recognition GUI
+# Face Recognition GUI
 
-## 📌 What is this project?
+# Authors
+
+- **Reza Dadbin** — GitHub: https://github.com/RezaDadbin
+- **Sina Lotfi** — GitHub: https://github.com/cinaLotfi
+
+
+## What is this project?
 
 **Face Recognition GUI** is a desktop application written in **Python** that performs **real-time face recognition** using your computer’s webcam. It allows you to **capture and label** faces (assign names to them) and later **recognize those faces** live in front of the camera — all through a simple, graphical interface built with **Tkinter**.
 
@@ -12,7 +18,7 @@ The system uses two deep learning models from the `facenet-pytorch` library:
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 The pipeline has three main stages: **Face Detection → Face Embedding → Face Recognition**.
 
@@ -31,7 +37,7 @@ The app computes embeddings for all stored images and keeps them in memory. Duri
 
 ---
 
-## 💻 How to Use It
+## How to Use It
 
 ### Install & Run
 ```bash
@@ -70,7 +76,7 @@ camera_index: 0              # change if you have multiple webcams
 
 ---
 
-## 🧱 Technical Overview
+## Technical Overview
 
 | Component | Purpose |
 |----------|---------|
@@ -86,13 +92,9 @@ camera_index: 0              # change if you have multiple webcams
 
 ---
 
-## 🔒 Data Privacy
+## Data Privacy
 
 All data stays **local** in `face_data/`. No external APIs or internet calls are used.
 
 ---
 
-## 👥 Authors
-
-- **Reza Dadbin** — GitHub: https://github.com/RezaDadbin
-- **Sina Lotfi** — GitHub: https://github.com/cinaLotfi
