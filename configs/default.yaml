@@ -1,0 +1,8 @@
+device: "cpu"        # "cpu" or "cuda"
+database_path: "face_data"
+recognition_threshold: 1.0  # ~0.9–1.1 is common for L2-normalized FaceNet
+camera_index: 0
+window_titles:
+  root: "Face Recognition System"
+  label: "Face Labeling"
+  predict: "Face Recognition"
