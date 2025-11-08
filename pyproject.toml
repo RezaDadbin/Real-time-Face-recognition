@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "face-recognition-gui"
+version = "0.1.0"
+description = "Simple Tkinter face labeling & recognition (FaceNet/MTCNN)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
