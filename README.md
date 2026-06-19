@@ -1,6 +1,6 @@
 # Face Recognition GUI
 
-# Authors
+## Authors
 
 - **Reza Dadbin** — GitHub: https://github.com/RezaDadbin
 - **Sina Lotfi** — GitHub: https://github.com/cinaLotfi
@@ -15,6 +15,13 @@ This project runs **completely offline**, without using any external cloud APIs 
 The system uses two deep learning models from the `facenet-pytorch` library:  
 - **MTCNN** for detecting faces in each video frame.  
 - **InceptionResnetV1 (FaceNet)** for converting faces into 512-dimensional numerical embeddings.
+
+## What This Demonstrates
+
+- Real-time webcam processing with OpenCV
+- Face detection with MTCNN and embedding extraction with FaceNet
+- Local enrollment and recognition without cloud APIs
+- A Tkinter GUI for labeling faces and running prediction mode
 
 ---
 
@@ -41,8 +48,8 @@ The app computes embeddings for all stored images and keeps them in memory. Duri
 
 ### Install & Run
 ```bash
-git clone https://github.com/RezaDadbin/face-recognition-gui.git
-cd face-recognition-gui
+git clone https://github.com/RezaDadbin/Real-time-Face-recognition.git
+cd Real-time-Face-recognition
 python -m venv .venv
 source .venv/bin/activate      # macOS/Linux
 # or
@@ -97,4 +104,3 @@ camera_index: 0              # change if you have multiple webcams
 All data stays **local** in `face_data/`. No external APIs or internet calls are used.
 
 ---
-
