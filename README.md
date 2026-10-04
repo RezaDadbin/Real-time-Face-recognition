@@ -99,6 +99,16 @@ camera_index: 0              # change if you have multiple webcams
 
 ---
 
+## Tests
+
+With the dependencies installed, run the existing tests from the repository root:
+
+```bash
+python -m pytest -q
+```
+
+CI uses the same invocation so the repository root is available for the `src.face_rec_gui` import.
+
 ## Data Privacy
 
 Enrolled images are stored locally in `face_data/` and processed locally by the application. Pretrained FaceNet weights may be downloaded on first initialization and cached by [facenet-pytorch](https://github.com/timesler/facenet-pytorch). This project does not establish a validated biometric-security or privacy guarantee.
