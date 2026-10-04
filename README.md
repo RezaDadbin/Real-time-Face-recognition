@@ -10,7 +10,7 @@
 
 **Face Recognition GUI** is a desktop application written in **Python** that performs **real-time face recognition** using your computer’s webcam. It allows you to **capture and label** faces (assign names to them) and later **recognize those faces** live in front of the camera — all through a simple, graphical interface built with **Tkinter**.
 
-This project runs **completely offline**, without using any external cloud APIs or internet access. It’s designed to be a **local, privacy-safe, and educational** implementation of how real face recognition systems work internally.
+This educational project performs enrollment and recognition locally, without a cloud recognition service. Initial dependency installation and the first pretrained FaceNet initialization may require internet access to download weights; recognition can run offline after those weights are cached.
 
 The system uses two deep learning models from the `facenet-pytorch` library:  
 - **MTCNN** for detecting faces in each video frame.  
@@ -33,7 +33,7 @@ The pipeline has three main stages: **Face Detection → Face Embedding → Face
 Each webcam frame is processed with **MTCNN**, which returns bounding boxes around one or more faces in the image.
 
 ### 2) Face Embedding (FaceNet / InceptionResnetV1)
-Each detected face is cropped and resized to **160×160**, then fed into **FaceNet**, producing a **512-dimensional embedding** (a numeric vector that represents the face). Two images of the same person produce similar embeddings; different people produce very different ones.
+Each detected face is cropped and resized to **160×160**, then fed into **FaceNet**, producing a **512-dimensional embedding** (a numeric vector that represents the face). The embedding distances are used to compare enrolled faces with incoming images. Recognition quality depends on image conditions, enrollment data, and the selected threshold.
 
 ### 3) Local Database and Recognition
 When you label faces, each image is saved locally under:
@@ -101,6 +101,6 @@ camera_index: 0              # change if you have multiple webcams
 
 ## Data Privacy
 
-All data stays **local** in `face_data/`. No external APIs or internet calls are used.
+Enrolled images are stored locally in `face_data/` and processed locally by the application. Pretrained FaceNet weights may be downloaded on first initialization and cached by [facenet-pytorch](https://github.com/timesler/facenet-pytorch). This project does not establish a validated biometric-security or privacy guarantee.
 
 ---
